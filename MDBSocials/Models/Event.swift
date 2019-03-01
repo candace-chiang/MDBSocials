@@ -20,25 +20,25 @@ class Event {
     
     var image: UIImage!
     
-    init(id: String, postDict: [String: Any]) {
+    init(id: String, event: [String: Any]) {
         self.id = id
-        self.title = postDict["title"] as? String
+        self.title = event["title"] as? String
         
-        let desc = postDict["description"] as? String
+        let desc = event["description"] as? String
         if desc != "" {
             self.description = desc
         } else {
             self.description = "No details :(."
         }
         
-        if let dateString = postDict["date"] as? String {
+        if let dateString = event["date"] as? String {
             self.date = dateString.toDate()
         } else {
             self.date = Date.init()
         }
         
-        self.poster = postDict["poster"] as? String
-        self.interested = postDict["interested"] as? [String]
+        self.poster = event["poster"] as? String
+        self.interested = event["interested"] as? [String]
         
         self.image = UIImage(named: "question")
         

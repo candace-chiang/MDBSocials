@@ -30,6 +30,7 @@ extension CreateViewController {
         imagePicker.center = CGPoint(x: view.frame.width/2, y: view.frame.height/7)
         imagePicker.setImage(UIImage(named: "question"), for: .normal)
         imagePicker.imageView?.contentMode = .scaleAspectFit
+        imagePicker.addTarget(self, action: #selector(openImageOptions), for: .touchUpInside)
         view.addSubview(imagePicker)
         
         imageView = UIImageView(frame: CGRect(x: view.frame.width * 0.52, y: imagePicker.frame.maxY - view.frame.height/10, width: view.frame.width/8, height: view.frame.width/8))
@@ -49,6 +50,7 @@ extension CreateViewController {
         nameField.backgroundColor = UIColor(hexString: "#2ECCFA")
         nameField.borderStyle = .none
         nameField.adjustsFontSizeToFitWidth = true
+        nameField.addTarget(self, action: #selector(nameEntered), for: .allEditingEvents)
         view.addSubview(nameField)
         
         descField = UITextView(frame: CGRect(x: 0, y: 0, width: view.frame.width * 11/12, height: view.frame.height/8))
@@ -77,7 +79,7 @@ extension CreateViewController {
         createButton.titleLabel!.font = UIFont(name: "RifficFree-Bold", size: 20)
         createButton.layer.borderColor = UIColor(hexString: "#00BFF").cgColor
         createButton.layer.cornerRadius = 5.0
-        //createButton.addTarget(self, action: #selector(loginAttempt), for: .touchUpInside)
+        createButton.addTarget(self, action: #selector(createEvent), for: .touchUpInside)
         view.addSubview(createButton)
     }
     

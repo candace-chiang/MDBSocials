@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateViewController: UIViewController, UITextFieldDelegate {
+class CreateViewController: UIViewController {
     
     var imageView: UIImageView!
     var imagePicker: UIButton!
@@ -18,6 +18,8 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
     var datePicker: UIDatePicker!
     
     //no variable names because UITextView has no addTarget function and consistency -_-
+    var name = ""
+    var desc = ""
     
     var createButton: UIButton!
 
@@ -35,6 +37,17 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
         setUpNavbar()
         self.nameField.delegate = self
         self.descField.delegate = self
+        if name == "" {
+            self.nameField.text = "Event Name"
+        } else {
+            self.nameField.text =  name
+        }
+        if desc == "" {
+            self.descField.text = "Event Description"
+        } else {
+            self.descField.text = desc
+        }
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -51,6 +64,10 @@ class CreateViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    @objc func nameEntered(_ sender: UITextField) {
+        name = sender.text!
     }
     
     @objc func cancelEvent(_ sender: UIBarButtonItem) {
