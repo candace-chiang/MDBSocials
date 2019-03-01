@@ -22,7 +22,13 @@ class Event {
     
     init(id: String, event: [String: Any]) {
         self.id = id
-        self.title = event["title"] as? String
+        
+        let poss = event["title"] as? String
+        if poss != "" {
+            self.title = poss
+        } else {
+            self.title = "Unknown..."
+        }
         
         let desc = event["description"] as? String
         if desc != "" {
@@ -38,10 +44,14 @@ class Event {
         }
         
         self.poster = event["poster"] as? String
-        self.interested = event["interested"] as? [String]
+        
+        if let val = event["interested"] as? [String] {
+            self.interested = val
+        } else {
+            self.interested = []
+        }
         
         self.image = UIImage(named: "question")
-        
     }
     
 }

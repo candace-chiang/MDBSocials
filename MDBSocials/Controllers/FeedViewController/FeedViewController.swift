@@ -8,19 +8,30 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class FeedViewController: UIViewController {
+    
+    var tableView: UITableView!
+    var events: [Event]! = []
+    var selected: Event!
+    
+    let ref = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpBackground()
-
+        setUpTable()
+        getAllEvents()
+        updateEvent()
+        newEvent()
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setUpNavbar()
+        tableView.reloadData()
     }
     
     @objc func createEvent(_ sender: UIBarButtonItem) {
@@ -39,6 +50,18 @@ class FeedViewController: UIViewController {
             else{
                 print("You are signed out")
                 return
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            switch identifier {
+                case "toDetails":
+                    let detailVC = segue.destination as! DetailViewController
+                    detailVC.event = selected
+                    break
+                default: break
+            }
         }
     }
 

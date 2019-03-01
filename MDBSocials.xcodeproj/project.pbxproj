@@ -30,7 +30,9 @@
 		428D4CC6222925D10003AEB4 /* CreateVC - Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D4CC5222925D10003AEB4 /* CreateVC - Delegate.swift */; };
 		428D4CC8222937DE0003AEB4 /* Barrio-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 428D4CC7222937DE0003AEB4 /* Barrio-Regular.otf */; };
 		428D4CCA22293ECD0003AEB4 /* SourceCodePro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 428D4CC922293ECD0003AEB4 /* SourceCodePro-Bold.otf */; };
-		428D4CCC222955F20003AEB4 /* CreateVC - Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D4CCB222955F20003AEB4 /* CreateVC - Create.swift */; };
+		428D4CCC222955F20003AEB4 /* CreateVC - Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D4CCB222955F20003AEB4 /* CreateVC - Firebase.swift */; };
+		428D4CCE222962930003AEB4 /* FeedVC - Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D4CCD222962930003AEB4 /* FeedVC - Firebase.swift */; };
+		428D4CD02229A4DD0003AEB4 /* DetailVC - Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428D4CCF2229A4DD0003AEB4 /* DetailVC - Firebase.swift */; };
 		4296C7D22215259A00EE366D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296C7D12215259A00EE366D /* AppDelegate.swift */; };
 		4296C7D42215259A00EE366D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296C7D32215259A00EE366D /* LoginViewController.swift */; };
 		4296C7D72215259A00EE366D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4296C7D52215259A00EE366D /* Main.storyboard */; };
@@ -62,7 +64,9 @@
 		428D4CC5222925D10003AEB4 /* CreateVC - Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateVC - Delegate.swift"; sourceTree = "<group>"; };
 		428D4CC7222937DE0003AEB4 /* Barrio-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barrio-Regular.otf"; sourceTree = "<group>"; };
 		428D4CC922293ECD0003AEB4 /* SourceCodePro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceCodePro-Bold.otf"; sourceTree = "<group>"; };
-		428D4CCB222955F20003AEB4 /* CreateVC - Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateVC - Create.swift"; sourceTree = "<group>"; };
+		428D4CCB222955F20003AEB4 /* CreateVC - Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateVC - Firebase.swift"; sourceTree = "<group>"; };
+		428D4CCD222962930003AEB4 /* FeedVC - Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedVC - Firebase.swift"; sourceTree = "<group>"; };
+		428D4CCF2229A4DD0003AEB4 /* DetailVC - Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailVC - Firebase.swift"; sourceTree = "<group>"; };
 		4296C7CE2215259A00EE366D /* MDBSocials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDBSocials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4296C7D12215259A00EE366D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4296C7D32215259A00EE366D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				428D4CB1222651260003AEB4 /* FeedViewController.swift */,
 				428D4CB3222652500003AEB4 /* FeedVC - UISetup.swift */,
 				428D4CB522266EAA0003AEB4 /* FeedVC - Table.swift */,
+				428D4CCD222962930003AEB4 /* FeedVC - Firebase.swift */,
 			);
 			path = FeedViewController;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 			children = (
 				428D4CBD222906C60003AEB4 /* DetailViewController.swift */,
 				428D4CC3222907070003AEB4 /* DetailVC - UISetup.swift */,
+				428D4CCF2229A4DD0003AEB4 /* DetailVC - Firebase.swift */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -183,7 +189,7 @@
 				428D4CBF222906CE0003AEB4 /* CreateViewController.swift */,
 				428D4CC1222906E90003AEB4 /* CreateVC - UISetup.swift */,
 				428D4CC5222925D10003AEB4 /* CreateVC - Delegate.swift */,
-				428D4CCB222955F20003AEB4 /* CreateVC - Create.swift */,
+				428D4CCB222955F20003AEB4 /* CreateVC - Firebase.swift */,
 			);
 			path = CreateViewController;
 			sourceTree = "<group>";
@@ -373,13 +379,15 @@
 				428D4CC2222906E90003AEB4 /* CreateVC - UISetup.swift in Sources */,
 				428D4CBC2228BA620003AEB4 /* dateToString.swift in Sources */,
 				428D4CC6222925D10003AEB4 /* CreateVC - Delegate.swift in Sources */,
+				428D4CD02229A4DD0003AEB4 /* DetailVC - Firebase.swift in Sources */,
 				428D4CBA2226706F0003AEB4 /* Event.swift in Sources */,
 				428D4C982224C4890003AEB4 /* LoginVC - UISetup.swift in Sources */,
 				428D4CB4222652500003AEB4 /* FeedVC - UISetup.swift in Sources */,
 				428D4CB622266EAA0003AEB4 /* FeedVC - Table.swift in Sources */,
 				428D4C962223FD3B0003AEB4 /* hexString.swift in Sources */,
 				428D4CB822266F380003AEB4 /* TableViewCell.swift in Sources */,
-				428D4CCC222955F20003AEB4 /* CreateVC - Create.swift in Sources */,
+				428D4CCE222962930003AEB4 /* FeedVC - Firebase.swift in Sources */,
+				428D4CCC222955F20003AEB4 /* CreateVC - Firebase.swift in Sources */,
 				428D4CC4222907070003AEB4 /* DetailVC - UISetup.swift in Sources */,
 				4296C7D42215259A00EE366D /* LoginViewController.swift in Sources */,
 				4296C7D22215259A00EE366D /* AppDelegate.swift in Sources */,

@@ -56,10 +56,28 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="i75-wX-p5b"/>
                     </view>
+                    <connections>
+                        <segue destination="aIy-a1-HUV" kind="show" identifier="toDetails" id="XKY-qo-uvH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VF2-41-fp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="563" y="364"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xgr-L0-ZyP">
+            <objects>
+                <viewController id="aIy-a1-HUV" customClass="DetailViewController" customModule="MDBSocials" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ERX-I7-xVD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="yfJ-J7-NJS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqG-fl-ksg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1437" y="730"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wZT-PH-VNQ">
